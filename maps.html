@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web GIS | Geomatics Portfolio</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- OpenLayers CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/ol@10.11.0/ol.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Geomatics Portfolio
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="maps.html">Web GIS</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="page-section">
+
+        <h1>Web GIS Applications</h1>
+
+        <p>
+            This page demonstrates interactive web mapping
+            applications developed using OpenLayers and Leaflet.
+        </p>
+
+
+        <!-- OPENLAYERS -->
+
+        <div class="map-section">
+
+            <h2>OpenLayers Map</h2>
+
+            <p>
+                An interactive map created using the OpenLayers
+                JavaScript library.
+            </p>
+
+            <div id="ol-map" class="web-map"></div>
+<div id="ol-popup" class="ol-popup">
+    <a href="#" id="ol-popup-closer" class="ol-popup-closer"></a>
+
+    <div id="ol-popup-content"></div>
+</div><div class="solution-box">
+
+    <h3>Issue 1: Marker Overlap</h3>
+
+    <p>
+        To prevent marker overlap at small scales,
+        the marker layer is only visible when the
+        map is zoomed in beyond a defined threshold.
+        In this project, markers become visible from
+        zoom level 11.
+    </p>
+
+    <h3>Issue 2: Repeating World</h3>
+
+    <p>
+        Horizontal world repetition is disabled by
+        setting the OpenLayers source property
+        <strong>wrapX: false</strong>.
+    </p>
+
+</div>
+        </div>
+
+
+        <!-- LEAFLET -->
+
+        <div class="map-section">
+
+            <h2>Leaflet Map</h2>
+
+            <p>
+                An interactive map created using the Leaflet
+                JavaScript library.
+            </p>
+
+            <div id="leaflet-map" class="web-map"></div>
+            <div class="solution-box">
+
+    <h3>Leaflet Implementation</h3>
+
+    <p>
+        Marker visibility is controlled according
+        to the current zoom level using the
+        <strong>zoomend</strong> event.
+    </p>
+
+    <p>
+        Horizontal repetition of map tiles is
+        prevented using the
+        <strong>noWrap: true</strong> option.
+    </p>
+
+</div>
+
+        </div>
+
+
+        <!-- FEATURES -->
+
+        <div class="feature-box">
+
+            <h2>Web GIS Features</h2>
+
+            <ul>
+                <li>OpenLayers interactive map</li>
+                <li>Leaflet interactive map</li>
+                <li>Zoom-dependent marker visibility</li>
+                <li>Prevention of horizontal world repetition</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 ADEM EREN KUVEL |
+        GMT 458 – Web GIS |
+        Hacettepe University
+    </p>
+
+</footer>
+
+
+<!-- OpenLayers JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/ol@10.11.0/dist/ol.js"></script>
+
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Our JavaScript Files -->
+<script src="js/openlayers-map.js"></script>
+<script src="js/leaflet-map.js"></script>
+
+</body>
+
+</html>

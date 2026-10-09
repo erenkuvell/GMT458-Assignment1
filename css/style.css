@@ -186,4 +186,209 @@ footer {
         font-size: 38px;
     }
 
-}S
+}/* GENERAL PAGE CONTENT */
+
+.page-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 30px;
+}
+
+.page-section h1 {
+    font-size: 44px;
+    margin-bottom: 30px;
+}
+
+.page-section h2 {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.page-section p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+
+/* INTEREST LIST */
+
+.skill-list {
+    margin-left: 25px;
+    line-height: 2;
+    color: #cbd5e1;
+}
+
+
+/* SKILL TAGS */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    padding: 10px 16px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    transform: translateY(-3px);
+    border-color: #38bdf8;
+}
+/* PROJECT TABLE */
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 35px;
+}
+
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #111827;
+}
+
+.project-table th,
+.project-table td {
+    border: 1px solid #334155;
+    padding: 18px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.project-table th {
+    background-color: #1e293b;
+    color: #38bdf8;
+}
+
+.project-table td {
+    color: #cbd5e1;
+}
+
+.project-table img {
+    width: 140px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-table tr {
+    transition: 0.3s;
+}
+
+.project-table tbody tr:hover {
+    background-color: #1e293b;
+}
+/* WEB GIS MAPS */
+
+.map-section {
+    margin-top: 60px;
+}
+
+.web-map {
+    width: 100%;
+    height: 500px;
+
+    margin-top: 25px;
+
+    border: 1px solid #334155;
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+.feature-box {
+    margin-top: 60px;
+
+    padding: 30px;
+
+    background-color: #111827;
+
+    border: 1px solid #334155;
+    border-radius: 12px;
+}
+
+.feature-box h2 {
+    margin-top: 0;
+}
+
+.feature-box ul {
+    margin-left: 25px;
+
+    line-height: 2;
+
+    color: #cbd5e1;
+}
+/* OPENLAYERS POPUP */
+
+.ol-popup {
+    position: absolute;
+
+    background-color: white;
+    color: #111827;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    border: 1px solid #cccccc;
+
+    min-width: 180px;
+
+    display: none;
+}
+
+.ol-popup-closer {
+    text-decoration: none;
+
+    position: absolute;
+
+    top: 4px;
+    right: 8px;
+
+    color: #111827;
+
+    font-weight: bold;
+}
+
+.ol-popup-closer::after {
+    content: "✕";
+}
+/* WEB GIS SOLUTION BOX */
+
+.solution-box {
+    margin-top: 20px;
+    padding: 25px;
+    background-color: #111827;
+    border-left: 4px solid #38bdf8;
+    border-radius: 8px;
+}
+
+.solution-box h3 {
+    color: #38bdf8;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.solution-box h3:first-child {
+    margin-top: 0;
+}
+
+.solution-box p {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.solution-box strong {
+    color: #f8fafc;
+}

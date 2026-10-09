@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background-color: #111827;
+
+    border-bottom: 1px solid #334155;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: calc(100vh - 150px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.small-title {
+    color: #38bdf8;
+
+    margin-bottom: 15px;
+
+    font-size: 18px;
+}
+
+.hero h1 {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 27px;
+
+    color: #94a3b8;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    line-height: 1.7;
+
+    font-size: 18px;
+
+    color: #cbd5e1;
+
+    margin-bottom: 35px;
+}
+
+
+/* BUTTON */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background-color: #38bdf8;
+
+    color: #0f172a;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+}
+
+
+/* CSS ANIMATION */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #94a3b8;
+
+    border-top: 1px solid #334155;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 20px;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+}S

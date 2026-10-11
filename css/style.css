@@ -392,3 +392,12 @@ footer {
 .solution-box strong {
     color: #f8fafc;
 }
+/* ACTIVE NAVIGATION */
+
+.nav-links a.active {
+    color: #38bdf8;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}

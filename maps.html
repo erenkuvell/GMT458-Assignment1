@@ -26,7 +26,10 @@
 
     <nav class="navbar">
 
-        
+        <button id="dangerBtn" class="danger-btn">
+    <span class="danger-dot"></span>
+    DO NOT CLICK
+</button>
 
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -165,7 +168,42 @@
 <!-- Our JavaScript Files -->
 <script src="js/openlayers-map.js"></script>
 <script src="js/leaflet-map.js"></script>
+<!-- FULLSCREEN EASTER EGG -->
+<div id="destructionScreen" class="destruction-screen">
+
+    <div class="destruction-content">
+
+        <div id="destructionTitle" class="destruction-title">
+            DESTRUCTION IN PROGRESS
+        </div>
+
+        <div id="destructionSub" class="destruction-sub">
+            SYSTEM OVERRIDE INITIALIZED
+        </div>
+
+        <div class="hourglass-container">
+
+            <div class="hourglass">
+                <div class="hourglass-top"></div>
+                <div class="hourglass-bottom"></div>
+                <div class="sand-stream"></div>
+            </div>
+
+        </div>
+
+        <div class="loading-bar">
+            <div id="loadingProgress" class="loading-progress"></div>
+        </div>
+
+        <div id="loadingPercent" class="loading-percent">
+            0%
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
 
 </body>
-
 </html>

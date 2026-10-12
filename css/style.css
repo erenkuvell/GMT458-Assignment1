@@ -439,3 +439,9 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+.hobby-card h3 i {
+    margin-right: 10px;
+    color: #38bdf8;
+    width: 22px;
+    text-align: center;
+}

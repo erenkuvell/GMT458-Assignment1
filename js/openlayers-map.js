@@ -29,23 +29,35 @@ const openLayersMap = new ol.Map({
 const locations = [
 
     {
-        name: 'Hacettepe University',
-        coordinates: [32.7335, 39.8671]
+        name: 'Hacettepe University - Beytepe Campus',
+        coordinates: [32.7335, 39.8671],
+        image: 'images/beytepe.jpg',
+        description:
+            'Beytepe Campus is one of the main campuses of Hacettepe University and hosts the Department of Geomatics Engineering.'
     },
 
     {
         name: 'Anitkabir',
-        coordinates: [32.8055, 39.9251]
+        coordinates: [32.8055, 39.9251],
+        image: 'images/anitkabir-photo.jpg',
+        description:
+            'Anitkabir is the mausoleum of Mustafa Kemal Ataturk and one of the most important landmarks of Ankara.'
     },
 
     {
         name: 'Ankara Castle',
-        coordinates: [32.8641, 39.9410]
+        coordinates: [32.8641, 39.9410],
+        image: 'images/ankara-castle.jpg',
+        description:
+            'Ankara Castle is a historic fortification located in the old city center of Ankara.'
     },
 
     {
-        name: 'Kizilay Square',
-        coordinates: [32.8533, 39.9208]
+        name: 'Atakule',
+        coordinates: [32.8597, 39.8867],
+        image: 'images/atakule.jpg',
+        description:
+            'Atakule is one of Ankara’s best-known landmarks and provides a panoramic view of the city.'
     }
 
 ];
@@ -56,14 +68,14 @@ const markerFeatures = locations.map(function(location) {
     return new ol.Feature({
 
         geometry: new ol.geom.Point(
-
             ol.proj.fromLonLat(
                 location.coordinates
             )
-
         ),
 
-        name: location.name
+        name: location.name,
+        image: location.image,
+        description: location.description
 
     });
 
@@ -175,12 +187,30 @@ openLayersMap.on(
 
             const name =
                 feature.get('name');
+                const image =
+    feature.get('image');
+
+const description =
+    feature.get('description');
 
 
-            popupContent.innerHTML =
-                '<b>' +
-                name +
-                '</b><br>Ankara, Türkiye';
+           popupContent.innerHTML = `
+    <div class="map-popup-content">
+
+        <img
+            src="${image}"
+            alt="${name}"
+            class="popup-image"
+        >
+
+        <h3>${name}</h3>
+
+        <p>${description}</p>
+
+        <small>Ankara, Türkiye</small>
+
+    </div>
+`;
 
 
             popupOverlay.setPosition(

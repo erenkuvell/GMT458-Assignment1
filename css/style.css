@@ -401,3 +401,41 @@ footer {
 .nav-links a.active::after {
     width: 100%;
 }
+/* HOBBIES & INTERESTS */
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.hobby-card {
+    background-color: #111827;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.hobby-card h3 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.hobby-card p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+}

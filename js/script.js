@@ -80,3 +80,40 @@ setTimeout(() => {
     }, 40);
 
 });
+const translations = {
+  en: {
+    home: "Home",
+    about: "About",
+    projects: "Projects",
+    map: "Map"
+  },
+
+  tr: {
+    home: "Ana Sayfa",
+    about: "Hakkımda",
+    projects: "Projeler",
+    map: "Harita"
+  }
+};
+const trBtn = document.getElementById("trBtn");
+const enBtn = document.getElementById("enBtn");
+function changeLanguage(language) {
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    const key = element.getAttribute("data-i18n");
+
+    if (translations[language][key]) {
+      element.textContent = translations[language][key];
+    }
+  });
+
+  localStorage.setItem("language", language);
+}
+trBtn.addEventListener("click", () => {
+  changeLanguage("tr");
+});
+
+enBtn.addEventListener("click", () => {
+  changeLanguage("en");
+});
+const savedLanguage = localStorage.getItem("language") || "en";
+changeLanguage(savedLanguage);
